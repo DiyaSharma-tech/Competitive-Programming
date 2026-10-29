@@ -3,7 +3,7 @@
 
 int main() {
     int n, i, target;
-    int arr[10000];
+    int arr[1000000];
     int low, high, mid, index = -1;
 
     scanf("%d", &n);
@@ -25,10 +25,10 @@ int main() {
             break;
         }
         else if (arr[mid] < target) {
-            low = mid + 1;
+            high = mid - 1;
         }
         else {
-            high = mid - 1;
+            low = mid + 1;
         }
     }
 
